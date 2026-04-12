@@ -97,7 +97,8 @@ private String[] lastAction = new String[0];
         super();
         this.app = app;
         pPlayers.clear();
-        pPlayers.add(new Player("You", false));
+        Player you = new Player("You", false);
+        pPlayers.add(you);
         pPlayers.add(new Player("Bot 1", true));
         pPlayers.add(new Player("Bot 2", true));
         pPlayers.add(new Player("Bot 3", true));
@@ -856,7 +857,10 @@ private String[] lastAction = new String[0];
         p.resetChips(1000);       
     }
 }
-
-
+ 
+    @Override
+    public int getScore() {
+        return pPlayers.get(1).getChips();
+    }
 }
 

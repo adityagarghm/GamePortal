@@ -1,3 +1,4 @@
+package cardproject.src;
 import processing.core.PApplet;
 
 public class App extends PApplet {
@@ -5,6 +6,10 @@ public class App extends PApplet {
     CardGame gamePlaying;
 
     public static void main(String[] args) {
+        PApplet.main("App");
+    }
+
+    public App(){
         PApplet.main("App");
     }
 

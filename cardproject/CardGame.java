@@ -228,4 +228,5 @@ public abstract class CardGame {
     }
     public void update(){}
     public void draw(PApplet g) {}
+ public abstract int getScore();    
 }
