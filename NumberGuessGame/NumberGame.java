@@ -1,15 +1,16 @@
+package NumberGuessGame;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Game {
+public class NumberGame {
     int guesses = 0;
     int numToGuess;
     int lowGuess; 
     int highGuess; 
     ArrayList<Integer> prevGuesses = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
-    Game() {
+    NumberGame() {
         Random answer = new Random();
         low();
         high();

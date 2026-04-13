@@ -3,9 +3,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import BuzzFeedQuiz.QuizIMP;
 import Game.Game;
-import cardproject.src.App;
-//import Quiz.Quiz;
+import NumberGuessGame.NumberGuessGameIMP;
+import cardproject.CardGameIMP;
 import Game.ErrorCheck;
 
 public class GamePortal {
@@ -35,11 +36,12 @@ public class GamePortal {
         }
     }
 
-    public static void loadGames() {
-        games.clear();
-        //games.add(new App());
-        //games.add(new Quiz());
-    }
+       public static void loadGames() {
+    games.clear();
+    games.add(new NumberGuessGameIMP());
+    games.add(new QuizIMP());
+    games.add(new CardGameIMP());
+}
 
     public static void printGameChoices() {
         int n = 1;

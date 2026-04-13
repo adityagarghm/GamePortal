@@ -1,4 +1,4 @@
-
+package BuzzFeedQuiz;
 /* Irene Feng 10/12/2022
 A question class with Answers.
 Aditya Garg 12/9/2025: Added bonus question method and revised ask() method

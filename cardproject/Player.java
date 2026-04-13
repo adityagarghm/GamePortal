@@ -1,4 +1,4 @@
-
+package cardproject;
 public class Player {
 
     private String name;

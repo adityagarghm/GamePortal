@@ -1,3 +1,4 @@
+package BuzzFeedQuiz;
 /*
  * Irene Feng Nov 2022
  * This is the class where we create the Quiz and run it. It has the main method. 

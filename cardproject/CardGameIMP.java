@@ -1,31 +1,30 @@
-package cardproject.src;
-import java.io.File;
-
-import Game.Game;
-
-public class CardGameIMP implements Game{
+package cardproject;
+import Game.GameWriteable;
+public class CardGameIMP implements GameWriteable {
     private App poker;
-
+ 
     @Override
     public String getGameName() {
-        return("Poker");
-       }
-
+        return "Poker";
+    }
+ 
     @Override
     public void play() {
         poker = new App();
     }
-
+ 
     @Override
     public String getScore() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getScore'");
+        if (poker == null) return "0";
+        return String.valueOf(poker.gamePlaying.getScore());
     }
-
+ 
+    // higher chips = better
     @Override
-    public void writeHighScore(File f) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'writeHighScore'");
+    public boolean isHighScore(String score, String currentHighScore) {
+        if (currentHighScore == null) return true;
+        return Integer.parseInt(score) > Integer.parseInt(currentHighScore);
     }
     
 }
+ 

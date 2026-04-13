@@ -1,3 +1,4 @@
+package cardproject;
 import processing.core.PApplet;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,6 +20,8 @@ public class PokerGame extends CardGame {
     private int currentBet = 0;           
     private int minRaise = 0;
     private boolean roundActive = false;
+    private int finalScore = 0;
+
 
     // per-player current bet for this round (separate from Player.bet)
     private int[] playerCurrentBets = new int[0];
@@ -47,6 +50,7 @@ public class PokerGame extends CardGame {
         private static final int RIVER   = 3;
         private static final int SHOWDOWN= 4;
         private int stage = PREFLOP;
+        
 private String[] lastAction = new String[0];
 
         private String stageName() {
@@ -822,6 +826,7 @@ private String[] lastAction = new String[0];
 
     // ---------- End Game ----------
     public void endGame(Player winner) {
+        
     if (winner == null) {
         winner = pPlayers.get(0);
         int maxChips = winner.getChips();
@@ -834,6 +839,7 @@ private String[] lastAction = new String[0];
     }
 
     gameWinner = winner;
+    finalScore = pPlayers.get(0).getChips(); // save human score before reset
     pushAction("GAME ENDED! " + gameWinner.getName() + " win(s) with $" + gameWinner.getChips());
 
     roundActive = false;
@@ -859,8 +865,8 @@ private String[] lastAction = new String[0];
 }
  
     @Override
-    public int getScore() {
-        return pPlayers.get(1).getChips();
-    }
+public int getScore() {
+    return finalScore;
+}
 }
 
