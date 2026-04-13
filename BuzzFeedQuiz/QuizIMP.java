@@ -1,6 +1,6 @@
 package BuzzFeedQuiz;
-import java.io.File;
 import Game.GameWriteable;
+import java.io.File;
 
 public class QuizIMP implements GameWriteable {
     @Override
@@ -14,7 +14,7 @@ public class QuizIMP implements GameWriteable {
         public String getScore() { return "N/A"; }
 
    @Override
-public boolean isHighScore(String score, String currentHighScore) {
+    public boolean isHighScore(String score, String currentHighScore) {
     return false;
 }
 
