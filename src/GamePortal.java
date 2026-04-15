@@ -7,6 +7,7 @@ import BuzzFeedQuiz.QuizIMP;
 import Game.Game;
 import NumberGuessGame.NumberGuessGameIMP;
 import cardproject.CardGameIMP;
+import scrollArt.scrollArtIMP;
 import Game.ErrorCheck;
 
 public class GamePortal {
@@ -41,7 +42,8 @@ public class GamePortal {
     games.add(new NumberGuessGameIMP());
     games.add(new QuizIMP());
     games.add(new CardGameIMP());
-}
+    games.add(new scrollArtIMP());
+       }
 
     public static void printGameChoices() {
         int n = 1;
