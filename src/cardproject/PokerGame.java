@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class PokerGame extends CardGame {
 
-    private final PApplet app;
+    private final App app;
     private static final long BOT_ACTION_DELAY_MS = 600L; // 600 ms delay between bot actions
     private long lastBotActionTime = 0;
 
@@ -97,7 +97,7 @@ private String[] lastAction = new String[0];
     private static final int MAX_LOG = 5;
     private Player gameWinner = null;
 
-    public PokerGame(PApplet app) {
+    public PokerGame(App app) {
         super();
         this.app = app;
         pPlayers.clear();
@@ -862,6 +862,9 @@ private String[] lastAction = new String[0];
         p.resetForRound();       
         p.resetChips(1000);       
     }
+    if (app != null) {
+        app.finishGame();
+    }
 }
  
     @Override
@@ -869,4 +872,3 @@ public int getScore() {
     return finalScore;
 }
 }
-

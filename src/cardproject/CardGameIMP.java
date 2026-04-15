@@ -10,7 +10,7 @@ public class CardGameIMP implements GameWriteable {
  
     @Override
     public void play() {
-        poker = new App();
+        poker = App.launchAndWait();
     }
  
     @Override
