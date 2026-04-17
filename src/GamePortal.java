@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import BuzzFeedQuiz.QuizIMP;
 import Game.Game;
+import MovieDownload.MovieDownloadIMP;
 import NumberGuessGame.NumberGuessGameIMP;
 import cardproject.CardGameIMP;
 import scrollArt.scrollArtIMP;
@@ -43,6 +44,7 @@ public class GamePortal {
     games.add(new QuizIMP());
     games.add(new CardGameIMP());
     games.add(new scrollArtIMP());
+      games.add(new MovieDownloadIMP());
        }
 
     public static void printGameChoices() {
