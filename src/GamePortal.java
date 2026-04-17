@@ -17,7 +17,7 @@ public class GamePortal {
     public static void main(String[] args) {
         HashMap<String, Integer> gameCounts = new HashMap<String, Integer>();
         // writes highscores
-        File f = new File("Highscore.csv");
+        File f = new File("outputs/Highscore.csv");
         while (true) {
             loadGames();
             

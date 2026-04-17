@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class FileSave {
 
-    String filename = "Results.csv";
+    String filename = "outputs/Results.csv";
     HashMap<String, int[]> userStats = new HashMap<>();
     String[] categories = {"Owl", "Dolphin", "Fox", "Lion", "Cat", "Dog"};
     public FileSave() throws IOException {

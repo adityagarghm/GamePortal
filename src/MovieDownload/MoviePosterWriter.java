@@ -56,8 +56,7 @@ public class MoviePosterWriter implements RestApiWriterInterface {
             }
 
         } catch (JSONException e) {
-            System.out.println("Sorry, there was a JSONException in the response.");
-            System.out.println("We look for the poster in {'Search': [{'Poster'... }]}, json object. We got " + json);
+            throw new IOException("Could not find this movie" + filename);
         }
     }
 
